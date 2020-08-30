@@ -1,0 +1,14 @@
+ruby
+def two_sum(nums, target)
+    nums.each_with_index do |fn, i|
+        size = nums.length 
+        next if i + 1 > size - 1
+        range = i + 1..size - 1 
+        range.each do |ii|
+            if fn + nums[ii] == target
+                return [i, ii]
+                break
+            end
+        end    
+    end
+end
